@@ -42,12 +42,15 @@ class _ProductManagerState extends State<ProductManager> {
     print(_products);
   }
 
+<<<<<<< HEAD
   void _deleteProduct(int index) {
     setState(() {
       _products.removeAt(index);
     });
   }
 
+=======
+>>>>>>> cd2c54106d634aad921905b38c23d5681ce67ea7
   @override
   Widget build(BuildContext context) {
     print('[ProductManager State] build()');
@@ -57,7 +60,11 @@ class _ProductManagerState extends State<ProductManager> {
           margin: EdgeInsets.all(10.0),
           child: ProductControl(_addProduct),
         ),
+<<<<<<< HEAD
         Expanded(child: Products(_products, deleteProduct: _deleteProduct,))
+=======
+        Expanded(child: Products(_products))
+>>>>>>> cd2c54106d634aad921905b38c23d5681ce67ea7
       ],
     );
   }
