@@ -4,14 +4,9 @@ import './pages/product.dart';
 
 class Products extends StatelessWidget {
   final List<Map<String, String>> products;
-<<<<<<< HEAD
   final Function deleteProduct;
 
   Products(this.products, {this.deleteProduct}) {
-=======
-
-  Products([this.products = const []]) {
->>>>>>> cd2c54106d634aad921905b38c23d5681ce67ea7
     print('[Products Widget] Constructor');
   }
 
@@ -20,35 +15,19 @@ class Products extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.asset(products[index]['image']),
-<<<<<<< HEAD
           Text(products[index]['title']),
-=======
-          Text(products[index]['tilte']),
->>>>>>> cd2c54106d634aad921905b38c23d5681ce67ea7
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
               FlatButton(
                 child: Text('Details'),
-<<<<<<< HEAD
-                onPressed: () => Navigator.push<bool>(
-=======
-                onPressed: () => Navigator.push(
->>>>>>> cd2c54106d634aad921905b38c23d5681ce67ea7
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => ProductPage(
-                            products[index]['title'], products[index]['image']),
-                      ),
-<<<<<<< HEAD
-                    ).then((bool value) {
+                onPressed: () =>
+                    Navigator.pushNamed<bool>(context, '/product/' + index.toString())
+                        .then((bool value) {
                       if (value) {
                         deleteProduct(index);
                       }
                     }),
-=======
-                    ),
->>>>>>> cd2c54106d634aad921905b38c23d5681ce67ea7
               )
             ],
           )
