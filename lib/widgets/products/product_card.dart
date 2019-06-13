@@ -26,24 +26,24 @@ class ProductCard extends StatelessWidget {
     );
   }
 
-  Widget _buildActionButtons(BuildContext context){
+  Widget _buildActionButtons(BuildContext context) {
     return ButtonBar(
-            alignment: MainAxisAlignment.center,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.info),
-                color: Theme.of(context).primaryColor,
-                onPressed: () => Navigator.pushNamed<bool>(
-                    context, '/product/' + productIndex.toString()),
-              ),
-              IconButton(
-                icon: Icon(Icons.favorite_border),
-                color: Colors.red,
-                onPressed: () => Navigator.pushNamed<bool>(
-                    context, '/product/' + productIndex.toString()),
-              )
-            ],
-          );
+      alignment: MainAxisAlignment.center,
+      children: <Widget>[
+        IconButton(
+          icon: Icon(Icons.info),
+          color: Theme.of(context).primaryColor,
+          onPressed: () => Navigator.pushNamed<bool>(
+              context, '/product/' + productIndex.toString()),
+        ),
+        IconButton(
+          icon: Icon(Icons.favorite_border),
+          color: Colors.red,
+          onPressed: () => Navigator.pushNamed<bool>(
+              context, '/product/' + productIndex.toString()),
+        )
+      ],
+    );
   }
 
   @override
